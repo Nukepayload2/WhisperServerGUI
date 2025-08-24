@@ -1,0 +1,376 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+        x:Class="WhisperServerGUI.MainWindow"
+        Title="Whisper服务器GUI" Width="900" Height="800">
+  <TabControl DockPanel.Dock="Top">
+    <TabItem Header="配置">
+      <ScrollViewer>
+        <StackPanel Margin="10" Orientation="Vertical">
+
+          <!-- Server Control Buttons -->
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <Button x:Name="StartServerButton" Content="启动服务器" Margin="5" Padding="10,5"/>
+            <Button x:Name="StopServerButton" Content="停止服务器" Margin="5" Padding="10,5" IsEnabled="False"/>
+            <Button x:Name="BrowseServerUrlButton" Content="浏览" Margin="5" Padding="10,5" IsEnabled="False"/>
+          </StackPanel>
+
+          <!-- Server Status -->
+          <TextBlock x:Name="ServerStatusTextBlock" Text="服务器状态: 已停止" Margin="5" HorizontalAlignment="Center"/>
+
+          <!-- Basic Settings Expander -->
+          <Expander HorizontalAlignment="Stretch" Header="基本设置" Margin="5">
+            <StackPanel Margin="10" Orientation="Vertical">
+              <!-- Server Executable Path -->
+              <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                <TextBlock Grid.Column="0" Text="服务器可执行文件:" VerticalAlignment="Center" Margin="5"/>
+                <TextBox Grid.Column="1" x:Name="ServerPathTextBox" Margin="5"/>
+                <Button Grid.Column="2" x:Name="BrowseServerButton" Content="浏览..." Margin="5"/>
+              </Grid>
+
+              <!-- Model Path -->
+              <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                <TextBlock Grid.Column="0" Text="模型路径:" VerticalAlignment="Center" Margin="5"/>
+                <TextBox Grid.Column="1" x:Name="ModelPathTextBox" Margin="5"/>
+                <Button Grid.Column="2" x:Name="BrowseModelButton" Content="浏览..." Margin="5"/>
+              </Grid>
+
+              <!-- Threads -->
+              <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                <TextBlock Grid.Column="0" Text="线程数:" VerticalAlignment="Center" Margin="5"/>
+                <NumericUpDown FormatString="0" Grid.Column="1" x:Name="ThreadsNumericUpDown" Minimum="1" Maximum="64" Value="4" Margin="5"/>
+              </Grid>
+
+              <!-- Language -->
+              <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                <TextBlock Grid.Column="0" Text="语言:" VerticalAlignment="Center" Margin="5"/>
+                <ComboBox Grid.Column="1" x:Name="LanguageComboBox" Margin="5" SelectedIndex="0">
+                  <ComboBoxItem Content="自动"/>
+                  <ComboBoxItem Content="英语"/>
+                  <ComboBoxItem Content="中文"/>
+                  <ComboBoxItem Content="西班牙语"/>
+                  <ComboBoxItem Content="法语"/>
+                  <ComboBoxItem Content="德语"/>
+                  <ComboBoxItem Content="日语"/>
+                  <ComboBoxItem Content="韩语"/>
+                </ComboBox>
+              </Grid>
+
+              <!-- Translate -->
+              <CheckBox x:Name="TranslateCheckBox" Content="翻译成英语" Margin="5"/>
+
+              <!-- Diarize -->
+              <CheckBox x:Name="DiarizeCheckBox" Content="区分说话人(立体声音频)" Margin="5"/>
+
+              <!-- Max Context -->
+              <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                <TextBlock Grid.Column="0" Text="最大上下文:" VerticalAlignment="Center" Margin="5"/>
+                <NumericUpDown Grid.Column="1" x:Name="MaxContextNumericUpDown" FormatString="0" Minimum="-1" Maximum="1000" Value="-1" Margin="5"/>
+              </Grid>
+
+              <!-- Word Timestamp Threshold -->
+              <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                <TextBlock Grid.Column="0" Text="单词阈值:" VerticalAlignment="Center" Margin="5"/>
+                <NumericUpDown Grid.Column="1" x:Name="WordThresholdNumericUpDown" Minimum="0" Maximum="1" Value="0.01" Increment="0.01" Margin="5"/>
+              </Grid>
+
+              <!-- No Fallback -->
+              <CheckBox x:Name="NoFallbackCheckBox" Content="无温度回退" Margin="5"/>
+
+              <!-- No Timestamps -->
+              <CheckBox x:Name="NoTimestampsCheckBox" Content="无时间戳" Margin="5"/>
+
+              <!-- Host -->
+              <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                <TextBlock Grid.Column="0" Text="主机:" VerticalAlignment="Center" Margin="5"/>
+                <TextBox Grid.Column="1" x:Name="HostTextBox" Text="127.0.0.1" Margin="5"/>
+              </Grid>
+
+              <!-- Port -->
+              <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                <TextBlock Grid.Column="0" Text="端口:" VerticalAlignment="Center" Margin="5"/>
+                <NumericUpDown Grid.Column="1" x:Name="PortNumericUpDown" FormatString="0" Minimum="1" Maximum="65535" Value="8080" Margin="5"/>
+              </Grid>
+
+              <!-- Flash Attention -->
+              <CheckBox x:Name="FlashAttentionCheckBox" Content="Flash Attention" Margin="5"/>
+            </StackPanel>
+          </Expander>
+
+          <!-- Advanced Settings Expander -->
+          <Expander HorizontalAlignment="Stretch" Header="高级设置" IsExpanded="False" Margin="5">
+            <ScrollViewer Height="400">
+              <StackPanel Margin="10" Orientation="Vertical">
+                <!-- Processors -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="处理器数量:" VerticalAlignment="Center" Margin="5"/>
+                  <NumericUpDown FormatString="0" Grid.Column="1" x:Name="ProcessorsNumericUpDown" Minimum="1" Maximum="64" Value="1" Margin="5"/>
+                </Grid>
+
+                <!-- Offset Time -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="时间偏移(ms):" VerticalAlignment="Center" Margin="5"/>
+                  <NumericUpDown FormatString="0" Grid.Column="1" x:Name="OffsetTimeNumericUpDown" Minimum="0" Maximum="100000" Value="0" Margin="5"/>
+                </Grid>
+
+                <!-- Offset Segment -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="段索引偏移:" VerticalAlignment="Center" Margin="5"/>
+                  <NumericUpDown FormatString="0" Grid.Column="1" x:Name="OffsetSegmentNumericUpDown" Minimum="0" Maximum="10000" Value="0" Margin="5"/>
+                </Grid>
+
+                <!-- Duration -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="音频处理时长(ms):" VerticalAlignment="Center" Margin="5"/>
+                  <NumericUpDown FormatString="0" Grid.Column="1" x:Name="DurationNumericUpDown" Minimum="0" Maximum="1000000" Value="0" Margin="5"/>
+                </Grid>
+
+                <!-- Max Length -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="最大段长度:" VerticalAlignment="Center" Margin="5"/>
+                  <NumericUpDown FormatString="0" Grid.Column="1" x:Name="MaxLengthNumericUpDown" Minimum="0" Maximum="1000" Value="0" Margin="5"/>
+                </Grid>
+
+                <!-- Split on Word -->
+                <CheckBox x:Name="SplitOnWordCheckBox" Content="按单词分割" Margin="5"/>
+
+                <!-- Best Of -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="最佳候选数:" VerticalAlignment="Center" Margin="5"/>
+                  <NumericUpDown FormatString="0" Grid.Column="1" x:Name="BestOfNumericUpDown" Minimum="1" Maximum="10" Value="2" Margin="5"/>
+                </Grid>
+
+                <!-- Beam Size -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="束搜索大小:" VerticalAlignment="Center" Margin="5"/>
+                  <NumericUpDown FormatString="0" Grid.Column="1" x:Name="BeamSizeNumericUpDown" Minimum="-1" Maximum="100" Value="-1" Margin="5"/>
+                </Grid>
+
+                <!-- Audio Context -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="音频上下文大小:" VerticalAlignment="Center" Margin="5"/>
+                  <NumericUpDown FormatString="0" Grid.Column="1" x:Name="AudioContextNumericUpDown" Minimum="0" Maximum="1000" Value="0" Margin="5"/>
+                </Grid>
+
+                <!-- Entropy Threshold -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="熵阈值:" VerticalAlignment="Center" Margin="5"/>
+                  <NumericUpDown Grid.Column="1" x:Name="EntropyThresholdNumericUpDown" Minimum="0" Maximum="10" Value="2.40" Increment="0.01" Margin="5"/>
+                </Grid>
+
+                <!-- Log Prob Threshold -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="对数概率阈值:" VerticalAlignment="Center" Margin="5"/>
+                  <NumericUpDown Grid.Column="1" x:Name="LogProbThresholdNumericUpDown" Minimum="-10" Maximum="0" Value="-1.00" Increment="0.01" Margin="5"/>
+                </Grid>
+
+                <!-- Debug Mode -->
+                <CheckBox x:Name="DebugModeCheckBox" Content="调试模式" Margin="5"/>
+
+                <!-- Tiny Diarize -->
+                <CheckBox x:Name="TinyDiarizeCheckBox" Content="TinyDiarize" Margin="5"/>
+
+                <!-- Print Special -->
+                <CheckBox x:Name="PrintSpecialCheckBox" Content="打印特殊标记" Margin="5"/>
+
+                <!-- Print Colors -->
+                <CheckBox x:Name="PrintColorsCheckBox" Content="打印颜色" Margin="5"/>
+
+                <!-- Print Realtime -->
+                <CheckBox x:Name="PrintRealtimeCheckBox" Content="实时打印输出" Margin="5"/>
+
+                <!-- Print Progress -->
+                <CheckBox x:Name="PrintProgressCheckBox" Content="打印进度" Margin="5"/>
+
+                <!-- Suppress Non Speech Tokens -->
+                <CheckBox x:Name="SuppressNonSpeechCheckBox" Content="抑制非语音标记" Margin="5"/>
+
+                <!-- No Speech Threshold -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="无语音阈值:" VerticalAlignment="Center" Margin="5"/>
+                  <NumericUpDown Grid.Column="1" x:Name="NoSpeechThresholdNumericUpDown" Minimum="0" Maximum="1" Value="0.60" Increment="0.01" Margin="5"/>
+                </Grid>
+
+                <!-- No Context -->
+                <CheckBox x:Name="NoContextCheckBox" Content="不使用先前音频上下文" Margin="5"/>
+
+                <!-- No GPU -->
+                <CheckBox x:Name="NoGPUCheckBox" Content="不使用GPU" Margin="5"/>
+
+                <!-- OpenVINO Device -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="OpenVINO设备:" VerticalAlignment="Center" Margin="5"/>
+                  <TextBox Grid.Column="1" x:Name="OpenVINODeviceTextBox" Margin="5"/>
+                </Grid>
+
+                <!-- DTW -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="DTW模型:" VerticalAlignment="Center" Margin="5"/>
+                  <TextBox Grid.Column="1" x:Name="DTWTextBox" Margin="5"/>
+                  <Button Grid.Column="2" x:Name="BrowseDTWButton" Content="浏览..." Margin="5"/>
+                </Grid>
+
+                <!-- VAD Options Expander -->
+                <Expander HorizontalAlignment="Stretch" Header="VAD选项" IsExpanded="False" Margin="5">
+                  <StackPanel Margin="10" Orientation="Vertical">
+                    <!-- VAD Enable -->
+                    <CheckBox x:Name="VADCheckBox" Content="启用VAD" Margin="5"/>
+
+                    <!-- VAD Model -->
+                    <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                      <TextBlock Grid.Column="0" Text="VAD模型:" VerticalAlignment="Center" Margin="5"/>
+                      <TextBox Grid.Column="1" x:Name="VADModelTextBox" Margin="5"/>
+                      <Button Grid.Column="2" x:Name="BrowseVADModelButton" Content="浏览..." Margin="5"/>
+                    </Grid>
+
+                    <!-- VAD Threshold -->
+                    <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                      <TextBlock Grid.Column="0" Text="VAD阈值:" VerticalAlignment="Center" Margin="5"/>
+                      <NumericUpDown Grid.Column="1" x:Name="VADThresholdNumericUpDown" Minimum="0" Maximum="1" Value="0.50" Increment="0.01" Margin="5"/>
+                    </Grid>
+
+                    <!-- VAD Min Speech Duration -->
+                    <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                      <TextBlock Grid.Column="0" Text="VAD最小语音时长(ms):" VerticalAlignment="Center" Margin="5"/>
+                      <NumericUpDown FormatString="0" Grid.Column="1" x:Name="VADMinSpeechDurationNumericUpDown" Minimum="0" Maximum="10000" Value="250" Margin="5"/>
+                    </Grid>
+
+                    <!-- VAD Min Silence Duration -->
+                    <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                      <TextBlock Grid.Column="0" Text="VAD最小静音时长(ms):" VerticalAlignment="Center" Margin="5"/>
+                      <NumericUpDown FormatString="0" Grid.Column="1" x:Name="VADMinSilenceDurationNumericUpDown" Minimum="0" Maximum="10000" Value="100" Margin="5"/>
+                    </Grid>
+
+                    <!-- VAD Max Speech Duration -->
+                    <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                      <TextBlock Grid.Column="0" Text="VAD最大语音时长(s):" VerticalAlignment="Center" Margin="5"/>
+                      <NumericUpDown Grid.Column="1" x:Name="VADMaxSpeechDurationNumericUpDown" Minimum="0" Maximum="10000" Value="0" Increment="0.1" Margin="5"/>
+                    </Grid>
+
+                    <!-- VAD Speech Pad -->
+                    <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                      <TextBlock Grid.Column="0" Text="VAD语音填充(ms):" VerticalAlignment="Center" Margin="5"/>
+                      <NumericUpDown FormatString="0" Grid.Column="1" x:Name="VADSpeechPadNumericUpDown" Minimum="0" Maximum="10000" Value="30" Margin="5"/>
+                    </Grid>
+
+                    <!-- VAD Samples Overlap -->
+                    <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                      <TextBlock Grid.Column="0" Text="VAD样本重叠(s):" VerticalAlignment="Center" Margin="5"/>
+                      <NumericUpDown Grid.Column="1" x:Name="VADSamplesOverlapNumericUpDown" Minimum="0" Maximum="1" Value="0.10" Increment="0.01" Margin="5"/>
+                    </Grid>
+                  </StackPanel>
+                </Expander>
+
+                <!-- Convert Audio -->
+                <CheckBox x:Name="ConvertAudioCheckBox" Content="转换音频为WAV(需要ffmpeg)" Margin="5"/>
+
+                <!-- Request Path -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="请求路径:" VerticalAlignment="Center" Margin="5"/>
+                  <TextBox Grid.Column="1" x:Name="RequestPathTextBox" Margin="5"/>
+                </Grid>
+
+                <!-- Inference Path -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="推理路径:" VerticalAlignment="Center" Margin="5"/>
+                  <TextBox Grid.Column="1" x:Name="InferencePathTextBox" Text="/inference" Margin="5"/>
+                </Grid>
+
+                <!-- Public Path -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="公共文件夹路径:" VerticalAlignment="Center" Margin="5"/>
+                  <TextBox Grid.Column="1" x:Name="PublicPathTextBox" Margin="5"/>
+                  <Button Grid.Column="2" x:Name="BrowsePublicPathButton" Content="浏览..." Margin="5"/>
+                </Grid>
+
+                <!-- Detect Language -->
+                <CheckBox x:Name="DetectLanguageCheckBox" Content="检测语言后退出" Margin="5"/>
+
+                <!-- Prompt -->
+                <Grid ColumnDefinitions="Auto,*,Auto" Margin="0,0,0,5">
+                  <TextBlock Grid.Column="0" Text="初始提示:" VerticalAlignment="Center" Margin="5"/>
+                  <TextBox Grid.Column="1" x:Name="PromptTextBox" Margin="5"/>
+                </Grid>
+              </StackPanel>
+            </ScrollViewer>
+          </Expander>
+
+          <!-- Preview Expander -->
+          <Expander x:Name="ExpanderParameterPreview" HorizontalAlignment="Stretch" Header="参数预览" IsExpanded="False" Margin="5">
+            <StackPanel Margin="10" Orientation="Vertical">
+              <TextBox x:Name="PreviewTextBox" IsReadOnly="True" TextWrapping="Wrap" Height="200" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+              <Button x:Name="UpdatePreviewButton" Content="更新预览" Margin="5" Padding="10,5" HorizontalAlignment="Right"/>
+            </StackPanel>
+          </Expander>
+
+          <!-- Server Output Expander -->
+          <Expander HorizontalAlignment="Stretch" Header="服务器输出" IsExpanded="False" Margin="5">
+            <ListBox x:Name="ServerOutputListBox" Height="400" ScrollViewer.VerticalScrollBarVisibility="Auto" FontFamily="Consolas"/>
+          </Expander>
+
+        </StackPanel>
+      </ScrollViewer>
+    </TabItem>
+    <TabItem Header="推理">
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="10" Orientation="Vertical">
+          <!-- File Drop Area -->
+          <Border x:Name="DropAreaBorder" DragDrop.AllowDrop="True" DragDrop.DragEnter="DropAreaBorder_DragEnter" DragDrop.Drop="DropAreaBorder_Drop" Background="#f0f0f0" BorderBrush="#ccc" BorderThickness="2" Margin="5" Padding="20">
+            <TextBlock Text="拖放音频文件到此处或点击浏览选择文件" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          </Border>
+
+          <!-- File List -->
+          <ListBox x:Name="FileListBox" Margin="5" SelectionMode="Multiple" Height="200" KeyDown="FileListBox_KeyDown"/>
+
+          <!-- Browse and Clear Buttons -->
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button x:Name="ClearFilesButton" Content="清空" Margin="5" Padding="10,5"/>
+          </StackPanel>
+
+          <!-- Progress and Control -->
+          <Grid ColumnDefinitions="*,Auto" Margin="5">
+            <ProgressBar Grid.Column="0" x:Name="TranscriptionProgressBar" Margin="5" IsIndeterminate="False" Value="0" Maximum="100"/>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="5">
+              <Button x:Name="StartTranscriptionButton" Content="开始" Margin="5" Padding="10,5" IsEnabled="False"/>
+              <Button x:Name="CancelTranscriptionButton" Content="取消" Margin="5" Padding="10,5" IsEnabled="False"/>
+            </StackPanel>
+          </Grid>
+
+          <!-- Concurrency Setting -->
+          <Grid ColumnDefinitions="Auto,*,Auto" Margin="5">
+            <TextBlock Grid.Column="0" Text="并发数:" VerticalAlignment="Center" Margin="5"/>
+            <NumericUpDown Grid.Column="1" x:Name="ConcurrencyNumericUpDown" FormatString="0" Minimum="1" Maximum="10" Value="1" Margin="5"/>
+          </Grid>
+
+          <!-- Response Format -->
+          <Grid ColumnDefinitions="Auto,*,Auto" Margin="5">
+            <TextBlock Grid.Column="0" Text="响应格式:" VerticalAlignment="Center" Margin="5"/>
+            <ComboBox Grid.Column="1" x:Name="ResponseFormatComboBox" Margin="5" SelectedIndex="1">
+              <ComboBoxItem Content="Verbose JSON"/>
+              <ComboBoxItem Content="JSON"/>
+              <ComboBoxItem Content="Text"/>
+              <ComboBoxItem Content="SRT"/>
+              <ComboBoxItem Content="VTT"/>
+            </ComboBox>
+          </Grid>
+
+          <!-- Output to File Option -->
+          <CheckBox x:Name="OutputToFileCheckBox" Content="输出到文件" Margin="5"/>
+
+          <!-- Output to CSV Option -->
+          <CheckBox x:Name="OutputToCsvCheckBox" Content="输出合并为CSV" Margin="5"/>
+
+        </StackPanel>
+        <!-- Results -->
+        <TextBox x:Name="ResultsTextBox" Grid.Row="1" Margin="16,0,16,16" IsReadOnly="True" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+      </Grid>
+    </TabItem>
+  </TabControl>
+</Window>
