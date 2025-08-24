@@ -61,11 +61,767 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  查找类似 高级设置 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property AdvancedSettingsExpander() As String
+            Get
+                Return ResourceManager.GetString("AdvancedSettingsExpander", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  查找类似 Whisper 本地服务助手 的本地化字符串。
         '''</summary>
         Public ReadOnly Property AppTitle() As String
             Get
                 Return ResourceManager.GetString("AppTitle", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 音频上下文大小: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property AudioContextLabel() As String
+            Get
+                Return ResourceManager.GetString("AudioContextLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 基本设置 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property BasicSettingsExpander() As String
+            Get
+                Return ResourceManager.GetString("BasicSettingsExpander", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 束搜索大小: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property BeamSizeLabel() As String
+            Get
+                Return ResourceManager.GetString("BeamSizeLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 最佳候选数: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property BestOfLabel() As String
+            Get
+                Return ResourceManager.GetString("BestOfLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 浏览 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property BrowseButton() As String
+            Get
+                Return ResourceManager.GetString("BrowseButton", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 浏览... 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property BrowseDotsButton() As String
+            Get
+                Return ResourceManager.GetString("BrowseDotsButton", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 取消 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property CancelTranscriptionButton() As String
+            Get
+                Return ResourceManager.GetString("CancelTranscriptionButton", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 清空 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ClearFilesButton() As String
+            Get
+                Return ResourceManager.GetString("ClearFilesButton", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 并发数: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ConcurrencyLabel() As String
+            Get
+                Return ResourceManager.GetString("ConcurrencyLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 配置 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ConfigTabHeader() As String
+            Get
+                Return ResourceManager.GetString("ConfigTabHeader", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 转换音频为WAV(需要ffmpeg) 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ConvertAudioCheckBox() As String
+            Get
+                Return ResourceManager.GetString("ConvertAudioCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 调试模式 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property DebugModeCheckBox() As String
+            Get
+                Return ResourceManager.GetString("DebugModeCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 检测语言后退出 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property DetectLanguageCheckBox() As String
+            Get
+                Return ResourceManager.GetString("DetectLanguageCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 区分说话人(立体声音频) 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property DiarizeCheckBox() As String
+            Get
+                Return ResourceManager.GetString("DiarizeCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 拖放音频文件到此处或点击浏览选择文件 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property DropAreaText() As String
+            Get
+                Return ResourceManager.GetString("DropAreaText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 DTW模型: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property DTWLabel() As String
+            Get
+                Return ResourceManager.GetString("DTWLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 音频处理时长(ms): 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property DurationLabel() As String
+            Get
+                Return ResourceManager.GetString("DurationLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 熵阈值: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property EntropyThresholdLabel() As String
+            Get
+                Return ResourceManager.GetString("EntropyThresholdLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Flash Attention 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property FlashAttentionCheckBox() As String
+            Get
+                Return ResourceManager.GetString("FlashAttentionCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 主机: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property HostLabel() As String
+            Get
+                Return ResourceManager.GetString("HostLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 推理路径: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property InferencePathLabel() As String
+            Get
+                Return ResourceManager.GetString("InferencePathLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 推理 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property InferenceTabHeader() As String
+            Get
+                Return ResourceManager.GetString("InferenceTabHeader", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 自动 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property LanguageAuto() As String
+            Get
+                Return ResourceManager.GetString("LanguageAuto", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 中文 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property LanguageChinese() As String
+            Get
+                Return ResourceManager.GetString("LanguageChinese", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 英语 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property LanguageEnglish() As String
+            Get
+                Return ResourceManager.GetString("LanguageEnglish", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 法语 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property LanguageFrench() As String
+            Get
+                Return ResourceManager.GetString("LanguageFrench", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 德语 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property LanguageGerman() As String
+            Get
+                Return ResourceManager.GetString("LanguageGerman", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 日语 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property LanguageJapanese() As String
+            Get
+                Return ResourceManager.GetString("LanguageJapanese", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 韩语 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property LanguageKorean() As String
+            Get
+                Return ResourceManager.GetString("LanguageKorean", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 语言: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property LanguageLabel() As String
+            Get
+                Return ResourceManager.GetString("LanguageLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 西班牙语 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property LanguageSpanish() As String
+            Get
+                Return ResourceManager.GetString("LanguageSpanish", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 对数概率阈值: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property LogProbThresholdLabel() As String
+            Get
+                Return ResourceManager.GetString("LogProbThresholdLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 最大上下文: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property MaxContextLabel() As String
+            Get
+                Return ResourceManager.GetString("MaxContextLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 最大段长度: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property MaxLengthLabel() As String
+            Get
+                Return ResourceManager.GetString("MaxLengthLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 模型路径: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ModelPathLabel() As String
+            Get
+                Return ResourceManager.GetString("ModelPathLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 不使用先前音频上下文 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property NoContextCheckBox() As String
+            Get
+                Return ResourceManager.GetString("NoContextCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 无温度回退 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property NoFallbackCheckBox() As String
+            Get
+                Return ResourceManager.GetString("NoFallbackCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 不使用GPU 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property NoGPUCheckBox() As String
+            Get
+                Return ResourceManager.GetString("NoGPUCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 无语音阈值: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property NoSpeechThresholdLabel() As String
+            Get
+                Return ResourceManager.GetString("NoSpeechThresholdLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 无时间戳 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property NoTimestampsCheckBox() As String
+            Get
+                Return ResourceManager.GetString("NoTimestampsCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 段索引偏移: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property OffsetSegmentLabel() As String
+            Get
+                Return ResourceManager.GetString("OffsetSegmentLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 时间偏移(ms): 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property OffsetTimeLabel() As String
+            Get
+                Return ResourceManager.GetString("OffsetTimeLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 OpenVINO设备: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property OpenVINODeviceLabel() As String
+            Get
+                Return ResourceManager.GetString("OpenVINODeviceLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 输出合并为CSV 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property OutputToCsvCheckBox() As String
+            Get
+                Return ResourceManager.GetString("OutputToCsvCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 输出到文件 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property OutputToFileCheckBox() As String
+            Get
+                Return ResourceManager.GetString("OutputToFileCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 参数预览 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ParameterPreviewExpander() As String
+            Get
+                Return ResourceManager.GetString("ParameterPreviewExpander", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 端口: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property PortLabel() As String
+            Get
+                Return ResourceManager.GetString("PortLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 打印颜色 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property PrintColorsCheckBox() As String
+            Get
+                Return ResourceManager.GetString("PrintColorsCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 打印进度 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property PrintProgressCheckBox() As String
+            Get
+                Return ResourceManager.GetString("PrintProgressCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 实时打印输出 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property PrintRealtimeCheckBox() As String
+            Get
+                Return ResourceManager.GetString("PrintRealtimeCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 打印特殊标记 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property PrintSpecialCheckBox() As String
+            Get
+                Return ResourceManager.GetString("PrintSpecialCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 处理器数量: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ProcessorsLabel() As String
+            Get
+                Return ResourceManager.GetString("ProcessorsLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 初始提示: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property PromptLabel() As String
+            Get
+                Return ResourceManager.GetString("PromptLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 公共文件夹路径: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property PublicPathLabel() As String
+            Get
+                Return ResourceManager.GetString("PublicPathLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 请求路径: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property RequestPathLabel() As String
+            Get
+                Return ResourceManager.GetString("RequestPathLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 JSON 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ResponseFormatJson() As String
+            Get
+                Return ResourceManager.GetString("ResponseFormatJson", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 响应格式: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ResponseFormatLabel() As String
+            Get
+                Return ResourceManager.GetString("ResponseFormatLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 SRT 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ResponseFormatSrt() As String
+            Get
+                Return ResourceManager.GetString("ResponseFormatSrt", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Text 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ResponseFormatText() As String
+            Get
+                Return ResourceManager.GetString("ResponseFormatText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Verbose JSON 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ResponseFormatVerboseJson() As String
+            Get
+                Return ResourceManager.GetString("ResponseFormatVerboseJson", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 VTT 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ResponseFormatVtt() As String
+            Get
+                Return ResourceManager.GetString("ResponseFormatVtt", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 服务器可执行文件: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ServerExecutablePathLabel() As String
+            Get
+                Return ResourceManager.GetString("ServerExecutablePathLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 服务器输出 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ServerOutputExpander() As String
+            Get
+                Return ResourceManager.GetString("ServerOutputExpander", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 服务器状态: 已停止 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ServerStatusText() As String
+            Get
+                Return ResourceManager.GetString("ServerStatusText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 按单词分割 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property SplitOnWordCheckBox() As String
+            Get
+                Return ResourceManager.GetString("SplitOnWordCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 启动服务器 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property StartServerButton() As String
+            Get
+                Return ResourceManager.GetString("StartServerButton", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 开始 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property StartTranscriptionButton() As String
+            Get
+                Return ResourceManager.GetString("StartTranscriptionButton", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 停止服务器 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property StopServerButton() As String
+            Get
+                Return ResourceManager.GetString("StopServerButton", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 抑制非语音标记 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property SuppressNonSpeechCheckBox() As String
+            Get
+                Return ResourceManager.GetString("SuppressNonSpeechCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 线程数: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ThreadsLabel() As String
+            Get
+                Return ResourceManager.GetString("ThreadsLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 TinyDiarize 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property TinyDiarizeCheckBox() As String
+            Get
+                Return ResourceManager.GetString("TinyDiarizeCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 翻译成英语 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property TranslateCheckBox() As String
+            Get
+                Return ResourceManager.GetString("TranslateCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 更新预览 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property UpdatePreviewButton() As String
+            Get
+                Return ResourceManager.GetString("UpdatePreviewButton", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 启用VAD 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property VADCheckBox() As String
+            Get
+                Return ResourceManager.GetString("VADCheckBox", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 VAD选项 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property VADEnhancerExpander() As String
+            Get
+                Return ResourceManager.GetString("VADEnhancerExpander", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 VAD最大语音时长(s): 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property VADMaxSpeechDurationLabel() As String
+            Get
+                Return ResourceManager.GetString("VADMaxSpeechDurationLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 VAD最小静音时长(ms): 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property VADMinSilenceDurationLabel() As String
+            Get
+                Return ResourceManager.GetString("VADMinSilenceDurationLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 VAD最小语音时长(ms): 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property VADMinSpeechDurationLabel() As String
+            Get
+                Return ResourceManager.GetString("VADMinSpeechDurationLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 VAD模型: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property VADModelLabel() As String
+            Get
+                Return ResourceManager.GetString("VADModelLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 VAD样本重叠(s): 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property VADSamplesOverlapLabel() As String
+            Get
+                Return ResourceManager.GetString("VADSamplesOverlapLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 VAD语音填充(ms): 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property VADSpeechPadLabel() As String
+            Get
+                Return ResourceManager.GetString("VADSpeechPadLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 VAD阈值: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property VADThresholdLabel() As String
+            Get
+                Return ResourceManager.GetString("VADThresholdLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 单词阈值: 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property WordThresholdLabel() As String
+            Get
+                Return ResourceManager.GetString("WordThresholdLabel", resourceCulture)
             End Get
         End Property
     End Module

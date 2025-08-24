@@ -215,7 +215,7 @@
                 </Grid>
 
                 <!-- VAD Options Expander -->
-                <Expander HorizontalAlignment="Stretch" Header="{x:Static res:Resources.VADOptionsExpander}" IsExpanded="False" Margin="5">
+                <Expander HorizontalAlignment="Stretch" Header="{x:Static res:Resources.VADEnhancerExpander}" IsExpanded="False" Margin="5">
                   <StackPanel Margin="10" Orientation="Vertical">
                     <!-- VAD Enable -->
                     <CheckBox x:Name="VADCheckBox" Content="{x:Static res:Resources.VADCheckBox}" Margin="5"/>
