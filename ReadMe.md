@@ -1,31 +1,33 @@
-﻿# Whisper Server GUI
-[Whisper 服务器](https://github.com/ggml-org/whisper.cpp/tree/master/examples/server)的桌面客户端
+# Whisper Server GUI
 
-## 开发环境
+Desktop client for [Whisper server](https://github.com/ggml-org/whisper.cpp/tree/master/examples/server)
+
+[中文说明](ReadMe.zh-CN.md)
+
+## Development Environment
 - .NET SDK 9.0
 
-## 运行环境
-- Windows / Linux / macOS 桌面
+## Runtime Environment
+- Windows / Linux / macOS desktop
 - .NET Runtime 9.0
-- 暂不支持 AOT 编译，如有需求请及时提出，并且暂时用自包含 R2R 编译
-- 目前仅支持简体中文
+- AOT compilation is not currently supported. Please raise an issue if needed, and use self-contained R2R compilation for now.
 
-## 用法
-- 下载 Whisper 服务器的编译产物
-- 下载 Whisper 模型
-- 启动本程序
-- 配置 Whisper 服务器和模型
-- 点击启动服务
-- 切换到推理界面，拖放文件进行语音识别
+## Usage
+- Download the compiled artifacts of the Whisper server
+- Download the Whisper model
+- Start this program
+- Configure the Whisper server and model
+- Click "Start Service"
+- Switch to the inference interface and drag and drop files for speech recognition
 
-## 功能
-- 完整的启动命令行参数配置，包括高级功能
-- 预览启动命令
-- 记忆上次启动和关闭程序的配置
-- 查看服务端的命令行输出
-- 批量文件推理
-- 并行请求推理
-- 中途取消推理
-- 完整的输出格式支持
-- 将推理结果输出到文件
-- 将输出合并为 CSV 文件
+## Features
+- Complete startup command-line parameter configuration, including advanced features
+- Preview startup command
+- Remember configuration from last startup and shutdown
+- View server command-line output
+- Batch file inference
+- Parallel request inference
+- Cancel inference mid-process
+- Full output format support
+- Output inference results to files
+- Merge outputs into CSV files
