@@ -20,7 +20,7 @@
           </StackPanel>
 
           <!-- Server Status -->
-          <TextBlock x:Name="ServerStatusTextBlock" Text="{x:Static res:Resources.ServerStatusText}" Margin="5" HorizontalAlignment="Center"/>
+          <TextBlock x:Name="ServerStatusTextBlock" Text="{x:Static res:Resources.ServerStatusStopped}" Margin="5" HorizontalAlignment="Center"/>
 
           <!-- Basic Settings Expander -->
           <Expander HorizontalAlignment="Stretch" Header="{x:Static res:Resources.BasicSettingsExpander}" Margin="5">

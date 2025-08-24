@@ -138,8 +138,14 @@
   <data name="BrowseDotsButton" xml:space="preserve">
     <value>浏览...</value>
   </data>
-  <data name="ServerStatusText" xml:space="preserve">
+  <data name="ServerStatusStopped" xml:space="preserve">
     <value>服务器状态: 已停止</value>
+  </data>
+  <data name="ServerStatusRunning" xml:space="preserve">
+    <value>服务器状态: 正在运行</value>
+  </data>
+  <data name="ServerStatusStarting" xml:space="preserve">
+    <value>服务器状态: 启动中...</value>
   </data>
   <data name="BasicSettingsExpander" xml:space="preserve">
     <value>基本设置</value>
@@ -371,5 +377,50 @@
   </data>
   <data name="OutputToCsvCheckBox" xml:space="preserve">
     <value>输出合并为CSV</value>
+  </data>
+  <data name="ErrorServerExecutableNotFound" xml:space="preserve">
+    <value>服务器状态: 错误 - 未找到服务器可执行文件</value>
+  </data>
+  <data name="ErrorModelFileNotFound" xml:space="preserve">
+    <value>服务器状态: 错误 - 未找到模型文件</value>
+  </data>
+  <data name="ErrorServerNotResponding" xml:space="preserve">
+    <value>服务器状态: 错误 - 20秒后服务器无响应</value>
+  </data>
+  <data name="ErrorOpeningBrowser" xml:space="preserve">
+    <value>打开浏览器错误: {0}</value>
+  </data>
+  <data name="ErrorGeneral" xml:space="preserve">
+    <value>错误: {0}</value>
+  </data>
+  <data name="ErrorReadingStream" xml:space="preserve">
+    <value>[{0}] 读取流错误: {1}</value>
+  </data>
+  <data name="ServerOutputLine" xml:space="preserve">
+    <value>[{0}] {1}</value>
+  </data>
+  <data name="TranscriptionAddedToCsv" xml:space="preserve">
+    <value>已添加到CSV集合</value>
+  </data>
+  <data name="FileSkippedExists" xml:space="preserve">
+    <value>跳过已存在文件</value>
+  </data>
+  <data name="FileSavedTo" xml:space="preserve">
+    <value>[文件已保存到: {0}]</value>
+  </data>
+  <data name="ErrorTranscribingFile" xml:space="preserve">
+    <value>转写文件错误: {0}</value>
+  </data>
+  <data name="NoCsvDataToSave" xml:space="preserve">
+    <value>没有要保存的CSV数据</value>
+  </data>
+  <data name="CsvFileSavedTo" xml:space="preserve">
+    <value>CSV文件已保存到: {0}</value>
+  </data>
+  <data name="ErrorSavingCsvFile" xml:space="preserve">
+    <value>保存CSV文件时出错: {0}</value>
+  </data>
+  <data name="ErrorParsingJsonForCsv" xml:space="preserve">
+    <value>解析JSON为CSV时出错: {0}</value>
   </data>
 </root>

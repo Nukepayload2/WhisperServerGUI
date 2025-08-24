@@ -138,8 +138,14 @@
   <data name="BrowseDotsButton" xml:space="preserve">
     <value>Browse...</value>
   </data>
-  <data name="ServerStatusText" xml:space="preserve">
+  <data name="ServerStatusStopped" xml:space="preserve">
     <value>Server Status: Stopped</value>
+  </data>
+  <data name="ServerStatusRunning" xml:space="preserve">
+    <value>Server Status: Running</value>
+  </data>
+  <data name="ServerStatusStarting" xml:space="preserve">
+    <value>Server Status: Starting...</value>
   </data>
   <data name="BasicSettingsExpander" xml:space="preserve">
     <value>Basic Settings</value>
@@ -371,5 +377,50 @@
   </data>
   <data name="OutputToCsvCheckBox" xml:space="preserve">
     <value>Output Merged to CSV</value>
+  </data>
+  <data name="ErrorServerExecutableNotFound" xml:space="preserve">
+    <value>Server Status: Error - Server executable not found</value>
+  </data>
+  <data name="ErrorModelFileNotFound" xml:space="preserve">
+    <value>Server Status: Error - Model file not found</value>
+  </data>
+  <data name="ErrorServerNotResponding" xml:space="preserve">
+    <value>Server Status: Error - Server not responding after 20 seconds</value>
+  </data>
+  <data name="ErrorOpeningBrowser" xml:space="preserve">
+    <value>Error opening browser: {0}</value>
+  </data>
+  <data name="ErrorGeneral" xml:space="preserve">
+    <value>Error: {0}</value>
+  </data>
+  <data name="ErrorReadingStream" xml:space="preserve">
+    <value>[{0}] Error reading stream: {1}</value>
+  </data>
+  <data name="ServerOutputLine" xml:space="preserve">
+    <value>[{0}] {1}</value>
+  </data>
+  <data name="TranscriptionAddedToCsv" xml:space="preserve">
+    <value>Added to CSV collection</value>
+  </data>
+  <data name="FileSkippedExists" xml:space="preserve">
+    <value>Skipped existing file</value>
+  </data>
+  <data name="FileSavedTo" xml:space="preserve">
+    <value>[File saved to: {0}]</value>
+  </data>
+  <data name="ErrorTranscribingFile" xml:space="preserve">
+    <value>Error transcribing file: {0}</value>
+  </data>
+  <data name="NoCsvDataToSave" xml:space="preserve">
+    <value>No CSV data to save</value>
+  </data>
+  <data name="CsvFileSavedTo" xml:space="preserve">
+    <value>CSV file saved to: {0}</value>
+  </data>
+  <data name="ErrorSavingCsvFile" xml:space="preserve">
+    <value>Error saving CSV file: {0}</value>
+  </data>
+  <data name="ErrorParsingJsonForCsv" xml:space="preserve">
+    <value>Error parsing JSON for CSV: {0}</value>
   </data>
 </root>

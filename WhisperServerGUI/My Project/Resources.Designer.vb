@@ -61,7 +61,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 高级设置 的本地化字符串。
+        '''  查找类似 Advanced Settings 的本地化字符串。
         '''</summary>
         Public ReadOnly Property AdvancedSettingsExpander() As String
             Get
@@ -70,7 +70,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 Whisper 本地服务助手 的本地化字符串。
+        '''  查找类似 Whisper Local Server Assistant 的本地化字符串。
         '''</summary>
         Public ReadOnly Property AppTitle() As String
             Get
@@ -79,7 +79,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 音频上下文大小: 的本地化字符串。
+        '''  查找类似 Audio Context Size: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property AudioContextLabel() As String
             Get
@@ -88,7 +88,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 基本设置 的本地化字符串。
+        '''  查找类似 Basic Settings 的本地化字符串。
         '''</summary>
         Public ReadOnly Property BasicSettingsExpander() As String
             Get
@@ -97,7 +97,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 束搜索大小: 的本地化字符串。
+        '''  查找类似 Beam Size: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property BeamSizeLabel() As String
             Get
@@ -106,7 +106,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 最佳候选数: 的本地化字符串。
+        '''  查找类似 Best Of: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property BestOfLabel() As String
             Get
@@ -115,7 +115,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 浏览 的本地化字符串。
+        '''  查找类似 Browse 的本地化字符串。
         '''</summary>
         Public ReadOnly Property BrowseButton() As String
             Get
@@ -124,7 +124,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 浏览... 的本地化字符串。
+        '''  查找类似 Browse... 的本地化字符串。
         '''</summary>
         Public ReadOnly Property BrowseDotsButton() As String
             Get
@@ -133,7 +133,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 取消 的本地化字符串。
+        '''  查找类似 Cancel 的本地化字符串。
         '''</summary>
         Public ReadOnly Property CancelTranscriptionButton() As String
             Get
@@ -142,7 +142,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 清空 的本地化字符串。
+        '''  查找类似 Clear 的本地化字符串。
         '''</summary>
         Public ReadOnly Property ClearFilesButton() As String
             Get
@@ -151,7 +151,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 并发数: 的本地化字符串。
+        '''  查找类似 Concurrency: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property ConcurrencyLabel() As String
             Get
@@ -160,7 +160,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 配置 的本地化字符串。
+        '''  查找类似 Configuration 的本地化字符串。
         '''</summary>
         Public ReadOnly Property ConfigTabHeader() As String
             Get
@@ -169,7 +169,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 转换音频为WAV(需要ffmpeg) 的本地化字符串。
+        '''  查找类似 Convert Audio to WAV (Requires ffmpeg) 的本地化字符串。
         '''</summary>
         Public ReadOnly Property ConvertAudioCheckBox() As String
             Get
@@ -178,7 +178,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 调试模式 的本地化字符串。
+        '''  查找类似 CSV file saved to: {0} 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property CsvFileSavedTo() As String
+            Get
+                Return ResourceManager.GetString("CsvFileSavedTo", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Debug Mode 的本地化字符串。
         '''</summary>
         Public ReadOnly Property DebugModeCheckBox() As String
             Get
@@ -187,7 +196,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 检测语言后退出 的本地化字符串。
+        '''  查找类似 Exit After Language Detection 的本地化字符串。
         '''</summary>
         Public ReadOnly Property DetectLanguageCheckBox() As String
             Get
@@ -196,7 +205,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 区分说话人(立体声音频) 的本地化字符串。
+        '''  查找类似 Diarize (Stereo Audio) 的本地化字符串。
         '''</summary>
         Public ReadOnly Property DiarizeCheckBox() As String
             Get
@@ -205,7 +214,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 拖放音频文件到此处或点击浏览选择文件 的本地化字符串。
+        '''  查找类似 Drag and drop audio files here or click Browse to select files 的本地化字符串。
         '''</summary>
         Public ReadOnly Property DropAreaText() As String
             Get
@@ -214,7 +223,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 DTW模型: 的本地化字符串。
+        '''  查找类似 DTW Model: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property DTWLabel() As String
             Get
@@ -223,7 +232,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 音频处理时长(ms): 的本地化字符串。
+        '''  查找类似 Audio Processing Duration (ms): 的本地化字符串。
         '''</summary>
         Public ReadOnly Property DurationLabel() As String
             Get
@@ -232,11 +241,110 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 熵阈值: 的本地化字符串。
+        '''  查找类似 Entropy Threshold: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property EntropyThresholdLabel() As String
             Get
                 Return ResourceManager.GetString("EntropyThresholdLabel", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Error: {0} 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ErrorGeneral() As String
+            Get
+                Return ResourceManager.GetString("ErrorGeneral", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Server Status: Error - Model file not found 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ErrorModelFileNotFound() As String
+            Get
+                Return ResourceManager.GetString("ErrorModelFileNotFound", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Error opening browser: {0} 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ErrorOpeningBrowser() As String
+            Get
+                Return ResourceManager.GetString("ErrorOpeningBrowser", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Error parsing JSON for CSV: {0} 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ErrorParsingJsonForCsv() As String
+            Get
+                Return ResourceManager.GetString("ErrorParsingJsonForCsv", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 [{0}] Error reading stream: {1} 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ErrorReadingStream() As String
+            Get
+                Return ResourceManager.GetString("ErrorReadingStream", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Error saving CSV file: {0} 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ErrorSavingCsvFile() As String
+            Get
+                Return ResourceManager.GetString("ErrorSavingCsvFile", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Server Status: Error - Server executable not found 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ErrorServerExecutableNotFound() As String
+            Get
+                Return ResourceManager.GetString("ErrorServerExecutableNotFound", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Server Status: Error - Server not responding after 20 seconds 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ErrorServerNotResponding() As String
+            Get
+                Return ResourceManager.GetString("ErrorServerNotResponding", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Error transcribing file: {0} 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ErrorTranscribingFile() As String
+            Get
+                Return ResourceManager.GetString("ErrorTranscribingFile", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 [File saved to: {0}] 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property FileSavedTo() As String
+            Get
+                Return ResourceManager.GetString("FileSavedTo", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Skipped existing file 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property FileSkippedExists() As String
+            Get
+                Return ResourceManager.GetString("FileSkippedExists", resourceCulture)
             End Get
         End Property
         
@@ -250,7 +358,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 主机: 的本地化字符串。
+        '''  查找类似 Host: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property HostLabel() As String
             Get
@@ -259,7 +367,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 推理路径: 的本地化字符串。
+        '''  查找类似 Inference Path: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property InferencePathLabel() As String
             Get
@@ -268,7 +376,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 推理 的本地化字符串。
+        '''  查找类似 Inference 的本地化字符串。
         '''</summary>
         Public ReadOnly Property InferenceTabHeader() As String
             Get
@@ -277,7 +385,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 自动 的本地化字符串。
+        '''  查找类似 Auto 的本地化字符串。
         '''</summary>
         Public ReadOnly Property LanguageAuto() As String
             Get
@@ -286,7 +394,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 中文 的本地化字符串。
+        '''  查找类似 Chinese 的本地化字符串。
         '''</summary>
         Public ReadOnly Property LanguageChinese() As String
             Get
@@ -295,7 +403,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 英语 的本地化字符串。
+        '''  查找类似 English 的本地化字符串。
         '''</summary>
         Public ReadOnly Property LanguageEnglish() As String
             Get
@@ -304,7 +412,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 法语 的本地化字符串。
+        '''  查找类似 French 的本地化字符串。
         '''</summary>
         Public ReadOnly Property LanguageFrench() As String
             Get
@@ -313,7 +421,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 德语 的本地化字符串。
+        '''  查找类似 German 的本地化字符串。
         '''</summary>
         Public ReadOnly Property LanguageGerman() As String
             Get
@@ -322,7 +430,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 日语 的本地化字符串。
+        '''  查找类似 Japanese 的本地化字符串。
         '''</summary>
         Public ReadOnly Property LanguageJapanese() As String
             Get
@@ -331,7 +439,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 韩语 的本地化字符串。
+        '''  查找类似 Korean 的本地化字符串。
         '''</summary>
         Public ReadOnly Property LanguageKorean() As String
             Get
@@ -340,7 +448,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 语言: 的本地化字符串。
+        '''  查找类似 Language: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property LanguageLabel() As String
             Get
@@ -349,7 +457,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 西班牙语 的本地化字符串。
+        '''  查找类似 Spanish 的本地化字符串。
         '''</summary>
         Public ReadOnly Property LanguageSpanish() As String
             Get
@@ -358,7 +466,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 对数概率阈值: 的本地化字符串。
+        '''  查找类似 Log Probability Threshold: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property LogProbThresholdLabel() As String
             Get
@@ -367,7 +475,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 最大上下文: 的本地化字符串。
+        '''  查找类似 Max Context: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property MaxContextLabel() As String
             Get
@@ -376,7 +484,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 最大段长度: 的本地化字符串。
+        '''  查找类似 Max Segment Length: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property MaxLengthLabel() As String
             Get
@@ -385,7 +493,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 模型路径: 的本地化字符串。
+        '''  查找类似 Model Path: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property ModelPathLabel() As String
             Get
@@ -394,7 +502,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 不使用先前音频上下文 的本地化字符串。
+        '''  查找类似 Do Not Use Previous Audio Context 的本地化字符串。
         '''</summary>
         Public ReadOnly Property NoContextCheckBox() As String
             Get
@@ -403,7 +511,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 无温度回退 的本地化字符串。
+        '''  查找类似 No CSV data to save 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property NoCsvDataToSave() As String
+            Get
+                Return ResourceManager.GetString("NoCsvDataToSave", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 No Temperature Fallback 的本地化字符串。
         '''</summary>
         Public ReadOnly Property NoFallbackCheckBox() As String
             Get
@@ -412,7 +529,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 不使用GPU 的本地化字符串。
+        '''  查找类似 Do Not Use GPU 的本地化字符串。
         '''</summary>
         Public ReadOnly Property NoGPUCheckBox() As String
             Get
@@ -421,7 +538,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 无语音阈值: 的本地化字符串。
+        '''  查找类似 No Speech Threshold: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property NoSpeechThresholdLabel() As String
             Get
@@ -430,7 +547,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 无时间戳 的本地化字符串。
+        '''  查找类似 No Timestamps 的本地化字符串。
         '''</summary>
         Public ReadOnly Property NoTimestampsCheckBox() As String
             Get
@@ -439,7 +556,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 段索引偏移: 的本地化字符串。
+        '''  查找类似 Segment Index Offset: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property OffsetSegmentLabel() As String
             Get
@@ -448,7 +565,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 时间偏移(ms): 的本地化字符串。
+        '''  查找类似 Time Offset (ms): 的本地化字符串。
         '''</summary>
         Public ReadOnly Property OffsetTimeLabel() As String
             Get
@@ -457,7 +574,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 OpenVINO设备: 的本地化字符串。
+        '''  查找类似 OpenVINO Device: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property OpenVINODeviceLabel() As String
             Get
@@ -466,7 +583,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 输出合并为CSV 的本地化字符串。
+        '''  查找类似 Output Merged to CSV 的本地化字符串。
         '''</summary>
         Public ReadOnly Property OutputToCsvCheckBox() As String
             Get
@@ -475,7 +592,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 输出到文件 的本地化字符串。
+        '''  查找类似 Output to File 的本地化字符串。
         '''</summary>
         Public ReadOnly Property OutputToFileCheckBox() As String
             Get
@@ -484,7 +601,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 参数预览 的本地化字符串。
+        '''  查找类似 Parameter Preview 的本地化字符串。
         '''</summary>
         Public ReadOnly Property ParameterPreviewExpander() As String
             Get
@@ -493,7 +610,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 端口: 的本地化字符串。
+        '''  查找类似 Port: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property PortLabel() As String
             Get
@@ -502,7 +619,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 打印颜色 的本地化字符串。
+        '''  查找类似 Print Colors 的本地化字符串。
         '''</summary>
         Public ReadOnly Property PrintColorsCheckBox() As String
             Get
@@ -511,7 +628,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 打印进度 的本地化字符串。
+        '''  查找类似 Print Progress 的本地化字符串。
         '''</summary>
         Public ReadOnly Property PrintProgressCheckBox() As String
             Get
@@ -520,7 +637,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 实时打印输出 的本地化字符串。
+        '''  查找类似 Print Real-time Output 的本地化字符串。
         '''</summary>
         Public ReadOnly Property PrintRealtimeCheckBox() As String
             Get
@@ -529,7 +646,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 打印特殊标记 的本地化字符串。
+        '''  查找类似 Print Special Tokens 的本地化字符串。
         '''</summary>
         Public ReadOnly Property PrintSpecialCheckBox() As String
             Get
@@ -538,7 +655,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 处理器数量: 的本地化字符串。
+        '''  查找类似 Processors: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property ProcessorsLabel() As String
             Get
@@ -547,7 +664,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 初始提示: 的本地化字符串。
+        '''  查找类似 Initial Prompt: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property PromptLabel() As String
             Get
@@ -556,7 +673,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 公共文件夹路径: 的本地化字符串。
+        '''  查找类似 Public Folder Path: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property PublicPathLabel() As String
             Get
@@ -565,7 +682,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 请求路径: 的本地化字符串。
+        '''  查找类似 Request Path: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property RequestPathLabel() As String
             Get
@@ -583,7 +700,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 响应格式: 的本地化字符串。
+        '''  查找类似 Response Format: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property ResponseFormatLabel() As String
             Get
@@ -628,7 +745,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 服务器可执行文件: 的本地化字符串。
+        '''  查找类似 Server Executable: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property ServerExecutablePathLabel() As String
             Get
@@ -637,7 +754,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 服务器输出 的本地化字符串。
+        '''  查找类似 Server Output 的本地化字符串。
         '''</summary>
         Public ReadOnly Property ServerOutputExpander() As String
             Get
@@ -646,16 +763,43 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 服务器状态: 已停止 的本地化字符串。
+        '''  查找类似 [{0}] {1} 的本地化字符串。
         '''</summary>
-        Public ReadOnly Property ServerStatusText() As String
+        Public ReadOnly Property ServerOutputLine() As String
             Get
-                Return ResourceManager.GetString("ServerStatusText", resourceCulture)
+                Return ResourceManager.GetString("ServerOutputLine", resourceCulture)
             End Get
         End Property
         
         '''<summary>
-        '''  查找类似 按单词分割 的本地化字符串。
+        '''  查找类似 Server Status: Running 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ServerStatusRunning() As String
+            Get
+                Return ResourceManager.GetString("ServerStatusRunning", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Server Status: Starting... 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ServerStatusStarting() As String
+            Get
+                Return ResourceManager.GetString("ServerStatusStarting", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Server Status: Stopped 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property ServerStatusStopped() As String
+            Get
+                Return ResourceManager.GetString("ServerStatusStopped", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Split on Word 的本地化字符串。
         '''</summary>
         Public ReadOnly Property SplitOnWordCheckBox() As String
             Get
@@ -664,7 +808,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 启动服务器 的本地化字符串。
+        '''  查找类似 Start Server 的本地化字符串。
         '''</summary>
         Public ReadOnly Property StartServerButton() As String
             Get
@@ -673,7 +817,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 开始 的本地化字符串。
+        '''  查找类似 Start 的本地化字符串。
         '''</summary>
         Public ReadOnly Property StartTranscriptionButton() As String
             Get
@@ -682,7 +826,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 停止服务器 的本地化字符串。
+        '''  查找类似 Stop Server 的本地化字符串。
         '''</summary>
         Public ReadOnly Property StopServerButton() As String
             Get
@@ -691,7 +835,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 抑制非语音标记 的本地化字符串。
+        '''  查找类似 Suppress Non-Speech Tokens 的本地化字符串。
         '''</summary>
         Public ReadOnly Property SuppressNonSpeechCheckBox() As String
             Get
@@ -700,7 +844,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 线程数: 的本地化字符串。
+        '''  查找类似 Threads: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property ThreadsLabel() As String
             Get
@@ -718,7 +862,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 翻译成英语 的本地化字符串。
+        '''  查找类似 Added to CSV collection 的本地化字符串。
+        '''</summary>
+        Public ReadOnly Property TranscriptionAddedToCsv() As String
+            Get
+                Return ResourceManager.GetString("TranscriptionAddedToCsv", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找类似 Translate to English 的本地化字符串。
         '''</summary>
         Public ReadOnly Property TranslateCheckBox() As String
             Get
@@ -727,7 +880,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 更新预览 的本地化字符串。
+        '''  查找类似 Update Preview 的本地化字符串。
         '''</summary>
         Public ReadOnly Property UpdatePreviewButton() As String
             Get
@@ -736,7 +889,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 启用VAD 的本地化字符串。
+        '''  查找类似 Enable VAD 的本地化字符串。
         '''</summary>
         Public ReadOnly Property VADCheckBox() As String
             Get
@@ -745,7 +898,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 VAD选项 的本地化字符串。
+        '''  查找类似 VAD Options 的本地化字符串。
         '''</summary>
         Public ReadOnly Property VADEnhancerExpander() As String
             Get
@@ -754,7 +907,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 VAD最大语音时长(s): 的本地化字符串。
+        '''  查找类似 VAD Max Speech Duration (s): 的本地化字符串。
         '''</summary>
         Public ReadOnly Property VADMaxSpeechDurationLabel() As String
             Get
@@ -763,7 +916,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 VAD最小静音时长(ms): 的本地化字符串。
+        '''  查找类似 VAD Min Silence Duration (ms): 的本地化字符串。
         '''</summary>
         Public ReadOnly Property VADMinSilenceDurationLabel() As String
             Get
@@ -772,7 +925,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 VAD最小语音时长(ms): 的本地化字符串。
+        '''  查找类似 VAD Min Speech Duration (ms): 的本地化字符串。
         '''</summary>
         Public ReadOnly Property VADMinSpeechDurationLabel() As String
             Get
@@ -781,7 +934,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 VAD模型: 的本地化字符串。
+        '''  查找类似 VAD Model: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property VADModelLabel() As String
             Get
@@ -790,7 +943,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 VAD样本重叠(s): 的本地化字符串。
+        '''  查找类似 VAD Samples Overlap (s): 的本地化字符串。
         '''</summary>
         Public ReadOnly Property VADSamplesOverlapLabel() As String
             Get
@@ -799,7 +952,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 VAD语音填充(ms): 的本地化字符串。
+        '''  查找类似 VAD Speech Padding (ms): 的本地化字符串。
         '''</summary>
         Public ReadOnly Property VADSpeechPadLabel() As String
             Get
@@ -808,7 +961,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 VAD阈值: 的本地化字符串。
+        '''  查找类似 VAD Threshold: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property VADThresholdLabel() As String
             Get
@@ -817,7 +970,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  查找类似 单词阈值: 的本地化字符串。
+        '''  查找类似 Word Threshold: 的本地化字符串。
         '''</summary>
         Public ReadOnly Property WordThresholdLabel() As String
             Get

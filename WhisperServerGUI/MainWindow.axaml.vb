@@ -32,7 +32,7 @@ Partial Class MainWindow
             Process.Start(New ProcessStartInfo(url) With {.UseShellExecute = True})
         Catch ex As Exception
             ' Handle any errors that occur when trying to open the URL
-            ServerStatusTextBlock.Text = $"Error opening browser: {ex.Message}"
+            ServerStatusTextBlock.Text = String.Format(My.Resources.ErrorOpeningBrowser, ex.Message)
         End Try
     End Sub
 
@@ -56,14 +56,14 @@ Partial Class MainWindow
         ServerOutputListBox.Items.Clear()
 
         If String.IsNullOrEmpty(settings.ServerPath) OrElse Not File.Exists(settings.ServerPath) Then
-            ServerStatusTextBlock.Text = "Server Status: Error - Server executable not found"
-            ServerOutputListBox.Items.Add("Error: Server executable not found" & Environment.NewLine & settings.ServerPath)
+            ServerStatusTextBlock.Text = My.Resources.ErrorServerExecutableNotFound
+            ServerOutputListBox.Items.Add(String.Format(My.Resources.ErrorGeneral, My.Resources.ErrorServerExecutableNotFound) & Environment.NewLine & settings.ServerPath)
             Return
         End If
 
         If String.IsNullOrEmpty(settings.ModelPath) OrElse Not File.Exists(settings.ModelPath) Then
-            ServerStatusTextBlock.Text = "Server Status: Error - Model file not found"
-            ServerOutputListBox.Items.Add("Error: Model file not found" & Environment.NewLine & settings.ModelPath)
+            ServerStatusTextBlock.Text = My.Resources.ErrorModelFileNotFound
+            ServerOutputListBox.Items.Add(String.Format(My.Resources.ErrorGeneral, My.Resources.ErrorModelFileNotFound) & Environment.NewLine & settings.ModelPath)
             Return
         End If
 
@@ -89,7 +89,7 @@ Partial Class MainWindow
             StartServerButton.IsEnabled = False
             StopServerButton.IsEnabled = True
             BrowseServerUrlButton.IsEnabled = False ' Disable browse button until server is confirmed running
-            ServerStatusTextBlock.Text = "Server Status: Starting..."
+            ServerStatusTextBlock.Text = My.Resources.ServerStatusStarting
 
             ' Wait a moment for the server to start and check status periodically
             serverRunning = False
@@ -102,16 +102,16 @@ Partial Class MainWindow
             Next
 
             If serverRunning Then
-                ServerStatusTextBlock.Text = "Server Status: Running"
+                ServerStatusTextBlock.Text = My.Resources.ServerStatusRunning
                 StartTranscriptionButton.IsEnabled = True
                 BrowseServerUrlButton.IsEnabled = True ' Enable browse button when server is running
             Else
-                ServerStatusTextBlock.Text = "Server Status: Error - Server not responding after 20 seconds"
+                ServerStatusTextBlock.Text = My.Resources.ErrorServerNotResponding
                 BrowseServerUrlButton.IsEnabled = False ' Keep browse button disabled if server failed to start
             End If
         Catch ex As Exception
-            ServerStatusTextBlock.Text = $"Server Status: Error - {ex.Message}"
-            ServerOutputListBox.Items.Add($"Error: {ex.Message}")
+            ServerStatusTextBlock.Text = String.Format(My.Resources.ErrorGeneral, ex.Message)
+            ServerOutputListBox.Items.Add(String.Format(My.Resources.ErrorGeneral, ex.Message))
             BrowseServerUrlButton.IsEnabled = False ' Keep browse button disabled on error
         End Try
     End Sub
@@ -129,7 +129,7 @@ Partial Class MainWindow
             StartServerButton.IsEnabled = True
             StopServerButton.IsEnabled = False
             BrowseServerUrlButton.IsEnabled = False ' Disable browse button when server is stopped
-            ServerStatusTextBlock.Text = "Server Status: Stopped"
+            ServerStatusTextBlock.Text = My.Resources.ServerStatusStopped
             StartTranscriptionButton.IsEnabled = False
         End Try
     End Sub
@@ -168,7 +168,7 @@ Partial Class MainWindow
             Do
                 line = Await stream.ReadLineAsync()
                 If line IsNot Nothing Then
-                    ServerOutputListBox.Items.Add($"[{prefix}] {line}")
+                    ServerOutputListBox.Items.Add(String.Format(My.Resources.ServerOutputLine, prefix, line))
                     ' Auto-scroll to bottom
                     If ServerOutputListBox.Items.Count > 0 Then
                         ServerOutputListBox.ScrollIntoView(ServerOutputListBox.Items.Count - 1)
@@ -177,7 +177,7 @@ Partial Class MainWindow
             Loop While line IsNot Nothing
         Catch ex As Exception
             ' Handle any errors that occur while reading the stream
-            ServerOutputListBox.Items.Add($"[{prefix}] Error reading stream: {ex.Message}")
+            ServerOutputListBox.Items.Add(String.Format(My.Resources.ErrorReadingStream, prefix, ex.Message))
             ' Auto-scroll to bottom
             If ServerOutputListBox.Items.Count > 0 Then
                 ServerOutputListBox.ScrollIntoView(ServerOutputListBox.Items.Count - 1)

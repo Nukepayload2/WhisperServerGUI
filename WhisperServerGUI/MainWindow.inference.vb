@@ -211,7 +211,7 @@ Partial Class MainWindow
                 If settings.OutputToCsv Then
                     ' Parse verbose_json response and add to CSV collection
                     ParseAndAddToCsvCollection(filePath, responseContent, csvTranscriptionLines)
-                    Return "已添加到CSV集合"
+                    Return My.Resources.TranscriptionAddedToCsv
                 End If
 
                 ' Check if output to file is enabled
@@ -226,7 +226,7 @@ Partial Class MainWindow
                 )
 
                 If File.Exists(outputFilePath) AndAlso New FileInfo(outputFilePath).Length > 0 Then
-                    Return "跳过已存在文件"
+                    Return My.Resources.FileSkippedExists
                 End If
 
                 ' Write to file
@@ -238,12 +238,12 @@ Partial Class MainWindow
                 End Try
 
                 ' Return success message instead of content
-                Return $"[文件已保存到: {outputFilePath}]"
+                Return String.Format(My.Resources.FileSavedTo, outputFilePath)
             End Using
         Catch ex As OperationCanceledException
             Throw
         Catch ex As Exception
-            Return $"Error transcribing file: {ex.Message}"
+            Return String.Format(My.Resources.ErrorTranscribingFile, ex.Message)
         End Try
     End Function
 
@@ -276,7 +276,7 @@ Partial Class MainWindow
             Next
         Catch ex As Exception
             ' Log error but don't throw to avoid breaking the transcription process
-            Console.WriteLine($"Error parsing JSON for CSV: {ex.Message}")
+            Console.WriteLine(String.Format(My.Resources.ErrorParsingJsonForCsv, ex.Message))
         End Try
     End Sub
 
@@ -285,7 +285,7 @@ Partial Class MainWindow
     ''' </summary>
     Private Async Function SaveCsvFileAsync(csvTranscriptionLines As ConcurrentBag(Of CsvTranscriptionLine)) As Task
         If csvTranscriptionLines.IsEmpty Then
-            ResultsTextBox.Text = "没有要保存的CSV数据"
+            ResultsTextBox.Text = My.Resources.NoCsvDataToSave
             Return
         End If
 
@@ -305,10 +305,10 @@ Partial Class MainWindow
                 ' Write CSV content with UTF-8 BOM encoding
                 Await File.WriteAllTextAsync(filePath, csvContent, Encoding.UTF8)
 
-                ResultsTextBox.Text = $"CSV文件已保存到: {filePath}"
+                ResultsTextBox.Text = String.Format(My.Resources.CsvFileSavedTo, filePath)
             End If
         Catch ex As Exception
-            ResultsTextBox.Text = $"保存CSV文件时出错: {ex.Message}"
+            ResultsTextBox.Text = String.Format(My.Resources.ErrorSavingCsvFile, ex.Message)
         End Try
     End Function
 
