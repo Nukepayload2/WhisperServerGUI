@@ -118,238 +118,238 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppTitle" xml:space="preserve">
-    <value>Whisper 本地服务助手</value>
+    <value>Whisper Local Server Assistant</value>
   </data>
   <data name="ConfigTabHeader" xml:space="preserve">
-    <value>配置</value>
+    <value>Configuration</value>
   </data>
   <data name="InferenceTabHeader" xml:space="preserve">
-    <value>推理</value>
+    <value>Inference</value>
   </data>
   <data name="StartServerButton" xml:space="preserve">
-    <value>启动服务器</value>
+    <value>Start Server</value>
   </data>
   <data name="StopServerButton" xml:space="preserve">
-    <value>停止服务器</value>
+    <value>Stop Server</value>
   </data>
   <data name="BrowseButton" xml:space="preserve">
-    <value>浏览</value>
+    <value>Browse</value>
   </data>
   <data name="BrowseDotsButton" xml:space="preserve">
-    <value>浏览...</value>
+    <value>Browse...</value>
   </data>
   <data name="ServerStatusText" xml:space="preserve">
-    <value>服务器状态: 已停止</value>
+    <value>Server Status: Stopped</value>
   </data>
   <data name="BasicSettingsExpander" xml:space="preserve">
-    <value>基本设置</value>
+    <value>Basic Settings</value>
   </data>
   <data name="ServerExecutablePathLabel" xml:space="preserve">
-    <value>服务器可执行文件:</value>
+    <value>Server Executable:</value>
   </data>
   <data name="ModelPathLabel" xml:space="preserve">
-    <value>模型路径:</value>
+    <value>Model Path:</value>
   </data>
   <data name="ThreadsLabel" xml:space="preserve">
-    <value>线程数:</value>
+    <value>Threads:</value>
   </data>
   <data name="LanguageLabel" xml:space="preserve">
-    <value>语言:</value>
+    <value>Language:</value>
   </data>
   <data name="LanguageAuto" xml:space="preserve">
-    <value>自动</value>
+    <value>Auto</value>
   </data>
   <data name="LanguageEnglish" xml:space="preserve">
-    <value>英语</value>
+    <value>English</value>
   </data>
   <data name="LanguageChinese" xml:space="preserve">
-    <value>中文</value>
+    <value>Chinese</value>
   </data>
   <data name="LanguageSpanish" xml:space="preserve">
-    <value>西班牙语</value>
+    <value>Spanish</value>
   </data>
   <data name="LanguageFrench" xml:space="preserve">
-    <value>法语</value>
+    <value>French</value>
   </data>
   <data name="LanguageGerman" xml:space="preserve">
-    <value>德语</value>
+    <value>German</value>
   </data>
   <data name="LanguageJapanese" xml:space="preserve">
-    <value>日语</value>
+    <value>Japanese</value>
   </data>
   <data name="LanguageKorean" xml:space="preserve">
-    <value>韩语</value>
+    <value>Korean</value>
   </data>
   <data name="TranslateCheckBox" xml:space="preserve">
-    <value>翻译成英语</value>
+    <value>Translate to English</value>
   </data>
   <data name="DiarizeCheckBox" xml:space="preserve">
-    <value>区分说话人(立体声音频)</value>
+    <value>Diarize (Stereo Audio)</value>
   </data>
   <data name="MaxContextLabel" xml:space="preserve">
-    <value>最大上下文:</value>
+    <value>Max Context:</value>
   </data>
   <data name="WordThresholdLabel" xml:space="preserve">
-    <value>单词阈值:</value>
+    <value>Word Threshold:</value>
   </data>
   <data name="NoFallbackCheckBox" xml:space="preserve">
-    <value>无温度回退</value>
+    <value>No Temperature Fallback</value>
   </data>
   <data name="NoTimestampsCheckBox" xml:space="preserve">
-    <value>无时间戳</value>
+    <value>No Timestamps</value>
   </data>
   <data name="HostLabel" xml:space="preserve">
-    <value>主机:</value>
+    <value>Host:</value>
   </data>
   <data name="PortLabel" xml:space="preserve">
-    <value>端口:</value>
+    <value>Port:</value>
   </data>
   <data name="FlashAttentionCheckBox" xml:space="preserve">
     <value>Flash Attention</value>
   </data>
   <data name="AdvancedSettingsExpander" xml:space="preserve">
-    <value>高级设置</value>
+    <value>Advanced Settings</value>
   </data>
   <data name="ProcessorsLabel" xml:space="preserve">
-    <value>处理器数量:</value>
+    <value>Processors:</value>
   </data>
   <data name="OffsetTimeLabel" xml:space="preserve">
-    <value>时间偏移(ms):</value>
+    <value>Time Offset (ms):</value>
   </data>
   <data name="OffsetSegmentLabel" xml:space="preserve">
-    <value>段索引偏移:</value>
+    <value>Segment Index Offset:</value>
   </data>
   <data name="DurationLabel" xml:space="preserve">
-    <value>音频处理时长(ms):</value>
+    <value>Audio Processing Duration (ms):</value>
   </data>
   <data name="MaxLengthLabel" xml:space="preserve">
-    <value>最大段长度:</value>
+    <value>Max Segment Length:</value>
   </data>
   <data name="SplitOnWordCheckBox" xml:space="preserve">
-    <value>按单词分割</value>
+    <value>Split on Word</value>
   </data>
   <data name="BestOfLabel" xml:space="preserve">
-    <value>最佳候选数:</value>
+    <value>Best Of:</value>
   </data>
   <data name="BeamSizeLabel" xml:space="preserve">
-    <value>束搜索大小:</value>
+    <value>Beam Size:</value>
   </data>
   <data name="AudioContextLabel" xml:space="preserve">
-    <value>音频上下文大小:</value>
+    <value>Audio Context Size:</value>
   </data>
   <data name="EntropyThresholdLabel" xml:space="preserve">
-    <value>熵阈值:</value>
+    <value>Entropy Threshold:</value>
   </data>
   <data name="LogProbThresholdLabel" xml:space="preserve">
-    <value>对数概率阈值:</value>
+    <value>Log Probability Threshold:</value>
   </data>
   <data name="DebugModeCheckBox" xml:space="preserve">
-    <value>调试模式</value>
+    <value>Debug Mode</value>
   </data>
   <data name="TinyDiarizeCheckBox" xml:space="preserve">
     <value>TinyDiarize</value>
   </data>
   <data name="PrintSpecialCheckBox" xml:space="preserve">
-    <value>打印特殊标记</value>
+    <value>Print Special Tokens</value>
   </data>
   <data name="PrintColorsCheckBox" xml:space="preserve">
-    <value>打印颜色</value>
+    <value>Print Colors</value>
   </data>
   <data name="PrintRealtimeCheckBox" xml:space="preserve">
-    <value>实时打印输出</value>
+    <value>Print Real-time Output</value>
   </data>
   <data name="PrintProgressCheckBox" xml:space="preserve">
-    <value>打印进度</value>
+    <value>Print Progress</value>
   </data>
   <data name="SuppressNonSpeechCheckBox" xml:space="preserve">
-    <value>抑制非语音标记</value>
+    <value>Suppress Non-Speech Tokens</value>
   </data>
   <data name="NoSpeechThresholdLabel" xml:space="preserve">
-    <value>无语音阈值:</value>
+    <value>No Speech Threshold:</value>
   </data>
   <data name="NoContextCheckBox" xml:space="preserve">
-    <value>不使用先前音频上下文</value>
+    <value>Do Not Use Previous Audio Context</value>
   </data>
   <data name="NoGPUCheckBox" xml:space="preserve">
-    <value>不使用GPU</value>
+    <value>Do Not Use GPU</value>
   </data>
   <data name="OpenVINODeviceLabel" xml:space="preserve">
-    <value>OpenVINO设备:</value>
+    <value>OpenVINO Device:</value>
   </data>
   <data name="DTWLabel" xml:space="preserve">
-    <value>DTW模型:</value>
+    <value>DTW Model:</value>
   </data>
   <data name="VADEnhancerExpander" xml:space="preserve">
-    <value>VAD选项</value>
+    <value>VAD Options</value>
   </data>
   <data name="VADCheckBox" xml:space="preserve">
-    <value>启用VAD</value>
+    <value>Enable VAD</value>
   </data>
   <data name="VADModelLabel" xml:space="preserve">
-    <value>VAD模型:</value>
+    <value>VAD Model:</value>
   </data>
   <data name="VADThresholdLabel" xml:space="preserve">
-    <value>VAD阈值:</value>
+    <value>VAD Threshold:</value>
   </data>
   <data name="VADMinSpeechDurationLabel" xml:space="preserve">
-    <value>VAD最小语音时长(ms):</value>
+    <value>VAD Min Speech Duration (ms):</value>
   </data>
   <data name="VADMinSilenceDurationLabel" xml:space="preserve">
-    <value>VAD最小静音时长(ms):</value>
+    <value>VAD Min Silence Duration (ms):</value>
   </data>
   <data name="VADMaxSpeechDurationLabel" xml:space="preserve">
-    <value>VAD最大语音时长(s):</value>
+    <value>VAD Max Speech Duration (s):</value>
   </data>
   <data name="VADSpeechPadLabel" xml:space="preserve">
-    <value>VAD语音填充(ms):</value>
+    <value>VAD Speech Padding (ms):</value>
   </data>
   <data name="VADSamplesOverlapLabel" xml:space="preserve">
-    <value>VAD样本重叠(s):</value>
+    <value>VAD Samples Overlap (s):</value>
   </data>
   <data name="ConvertAudioCheckBox" xml:space="preserve">
-    <value>转换音频为WAV(需要ffmpeg)</value>
+    <value>Convert Audio to WAV (Requires ffmpeg)</value>
   </data>
   <data name="RequestPathLabel" xml:space="preserve">
-    <value>请求路径:</value>
+    <value>Request Path:</value>
   </data>
   <data name="InferencePathLabel" xml:space="preserve">
-    <value>推理路径:</value>
+    <value>Inference Path:</value>
   </data>
   <data name="PublicPathLabel" xml:space="preserve">
-    <value>公共文件夹路径:</value>
+    <value>Public Folder Path:</value>
   </data>
   <data name="DetectLanguageCheckBox" xml:space="preserve">
-    <value>检测语言后退出</value>
+    <value>Exit After Language Detection</value>
   </data>
   <data name="PromptLabel" xml:space="preserve">
-    <value>初始提示:</value>
+    <value>Initial Prompt:</value>
   </data>
   <data name="ParameterPreviewExpander" xml:space="preserve">
-    <value>参数预览</value>
+    <value>Parameter Preview</value>
   </data>
   <data name="UpdatePreviewButton" xml:space="preserve">
-    <value>更新预览</value>
+    <value>Update Preview</value>
   </data>
   <data name="ServerOutputExpander" xml:space="preserve">
-    <value>服务器输出</value>
+    <value>Server Output</value>
   </data>
   <data name="DropAreaText" xml:space="preserve">
-    <value>拖放音频文件到此处或点击浏览选择文件</value>
+    <value>Drag and drop audio files here or click Browse to select files</value>
   </data>
   <data name="ClearFilesButton" xml:space="preserve">
-    <value>清空</value>
+    <value>Clear</value>
   </data>
   <data name="StartTranscriptionButton" xml:space="preserve">
-    <value>开始</value>
+    <value>Start</value>
   </data>
   <data name="CancelTranscriptionButton" xml:space="preserve">
-    <value>取消</value>
+    <value>Cancel</value>
   </data>
   <data name="ConcurrencyLabel" xml:space="preserve">
-    <value>并发数:</value>
+    <value>Concurrency:</value>
   </data>
   <data name="ResponseFormatLabel" xml:space="preserve">
-    <value>响应格式:</value>
+    <value>Response Format:</value>
   </data>
   <data name="ResponseFormatVerboseJson" xml:space="preserve">
     <value>Verbose JSON</value>
@@ -367,9 +367,9 @@
     <value>VTT</value>
   </data>
   <data name="OutputToFileCheckBox" xml:space="preserve">
-    <value>输出到文件</value>
+    <value>Output to File</value>
   </data>
   <data name="OutputToCsvCheckBox" xml:space="preserve">
-    <value>输出合并为CSV</value>
+    <value>Output Merged to CSV</value>
   </data>
 </root>
