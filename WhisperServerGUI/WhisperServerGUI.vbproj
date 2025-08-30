@@ -16,6 +16,10 @@
     <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.4" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.3.4" />
+    <PackageReference Include="Nukepayload2.CodeAnalysis.ExtendRestrictedTypes" Version="1.0.2-beta">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Nukepayload2.SourceGenerators.AvaloniaUI" Version="1.0.0" />
     <PackageReference Include="Nukepayload2.Csv" Version="1.5.0" />
   </ItemGroup>
@@ -27,9 +31,6 @@
       <DependentUpon>%(Filename)</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RefStructHelper\RefStructHelper.vbproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="My Project\Resources.Designer.vb">
