@@ -5,11 +5,11 @@ Desktop client for [Whisper server](https://github.com/ggml-org/whisper.cpp/tree
 [中文说明](ReadMe.zh-CN.md)
 
 ## Development Environment
-- .NET SDK 9.0
+- .NET SDK 10.0
 
 ## Runtime Environment
 - Windows / Linux / macOS desktop
-- .NET Runtime 9.0
+- .NET Runtime 10.0
 - AOT compilation is not currently supported. Please raise an issue if needed, and use self-contained R2R compilation for now.
 
 ## Usage

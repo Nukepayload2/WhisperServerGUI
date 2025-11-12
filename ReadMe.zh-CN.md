@@ -2,11 +2,11 @@
 [Whisper 服务器](https://github.com/ggml-org/whisper.cpp/tree/master/examples/server)的桌面客户端
 
 ## 开发环境
-- .NET SDK 9.0
+- .NET SDK 10.0
 
 ## 运行环境
 - Windows / Linux / macOS 桌面
-- .NET Runtime 9.0
+- .NET Runtime 10.0
 - 暂不支持 AOT 编译，如有需求请及时提出，并且暂时用自包含 R2R 编译
 
 ## 用法
