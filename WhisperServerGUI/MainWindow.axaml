@@ -1,4 +1,4 @@
-<Window xmlns="https://github.com/avaloniaui"
+﻿<Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -323,7 +323,7 @@
         </Grid.RowDefinitions>
         <StackPanel Margin="10" Orientation="Vertical">
           <!-- File Drop Area -->
-          <Border x:Name="DropAreaBorder" DragDrop.AllowDrop="True" DragDrop.DragEnter="DropAreaBorder_DragEnter" DragDrop.Drop="DropAreaBorder_Drop" Background="#f0f0f0" BorderBrush="#ccc" BorderThickness="2" Margin="5" Padding="20">
+          <Border x:Name="DropAreaBorder" DragDrop.AllowDrop="True" DragDrop.DragEnter="DropAreaBorder_DragEnter" DragDrop.Drop="DropAreaBorder_Drop" Background="#267f7f7f" BorderBrush="#707f7f7f" BorderThickness="2" Margin="5" Padding="20">
             <TextBlock Text="{x:Static res:Resources.DropAreaText}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
           </Border>
 

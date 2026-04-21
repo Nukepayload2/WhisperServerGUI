@@ -72,14 +72,17 @@ Partial Class MainWindow
     End Sub
 
     Private Sub DropAreaBorder_DragEnter(sender As Object, e As DragEventArgs)
-        If e.Data.Contains(DataFormats.Files) Then
+        If e.DataTransfer.Formats.Contains(DataFormat.File) Then
             e.DragEffects = DragDropEffects.Link
         End If
     End Sub
 
     Private Sub DropAreaBorder_Drop(sender As Object, e As DragEventArgs)
-        If e.Data.Contains(DataFormats.Files) Then
-            DropFiles(e.Data.GetFiles.Select(Function(it) it.TryGetLocalPath))
+        If e.DataTransfer.Formats.Contains(DataFormat.File) Then
+            Dim data = e.DataTransfer.TryGetFiles()
+            If data IsNot Nothing Then
+                DropFiles(data.Select(Function(it) it.TryGetLocalPath))
+            End If
         End If
     End Sub
 
