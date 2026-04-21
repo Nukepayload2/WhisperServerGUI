@@ -191,6 +191,19 @@ Partial Class MainWindow
 
     Private Async Function TranscribeFile(filePath As String, cancellationToken As CancellationToken, csvTranscriptionLines As ConcurrentBag(Of CsvTranscriptionLine)) As Task(Of String)
         Try
+            ' Pre-check: skip if output file already exists (before inference)
+            Dim responseFormat As String = If(settings.OutputToCsv, "verbose_json", settings.ResponseFormat)
+            Dim outputFilePath As String = Nothing
+            If settings.OutputToFile Then
+                outputFilePath = Path.Combine(
+                    Path.GetDirectoryName(filePath),
+                    Path.GetFileNameWithoutExtension(filePath) & GetOutputFileExtension(responseFormat)
+                )
+                If File.Exists(outputFilePath) AndAlso New FileInfo(outputFilePath).Length > 0 Then
+                    Return My.Resources.FileSkippedExists
+                End If
+            End If
+
             Using content As New MultipartFormDataContent()
                 ' Add file
                 Dim fileBytes = File.ReadAllBytes(filePath)
@@ -198,8 +211,6 @@ Partial Class MainWindow
                 content.Add(fileContent, "file", Path.GetFileName(filePath))
 
                 ' Add parameters
-                ' If OutputToCsv is enabled, force response format to verbose_json
-                Dim responseFormat As String = If(settings.OutputToCsv, "verbose_json", settings.ResponseFormat)
                 content.Add(New StringContent(responseFormat), "response_format")
 
                 ' Send request
@@ -222,15 +233,11 @@ Partial Class MainWindow
                     ' Return content as usual
                     Return responseContent
                 End If
-                ' Generate output file path`
-                Dim outputFilePath = Path.Combine(
+                ' Generate output file path
+                outputFilePath = Path.Combine(
                     Path.GetDirectoryName(filePath),
                     Path.GetFileNameWithoutExtension(filePath) & GetOutputFileExtension(responseFormat)
                 )
-
-                If File.Exists(outputFilePath) AndAlso New FileInfo(outputFilePath).Length > 0 Then
-                    Return My.Resources.FileSkippedExists
-                End If
 
                 ' Write to file
                 Try
