@@ -1,4 +1,4 @@
-Imports System.Collections.Concurrent
+﻿Imports System.Collections.Concurrent
 Imports System.Collections.Generic
 Imports System.IO
 Imports System.Net.Http
@@ -29,7 +29,7 @@ Partial Class MainWindow
     ' Inference Tab Event Handlers
     Private Async Sub BrowseFilesButton_Click() Handles DropAreaBorder.PointerPressed
         Dim files = Await OpenFileDialog("Select Audio Files", New FilePickerFileType("Audio Files") With {
-                                         .Patterns = {"*.wav", "*.mp3", "*.flac", "*.m4a", "*.ogg"}
+                                         .Patterns = {"*.wav"}
                                          })
         DropFiles(files)
     End Sub
@@ -37,7 +37,14 @@ Partial Class MainWindow
     Private Sub DropFiles(files As IEnumerable(Of String))
         If files Is Nothing Then Return
         For Each file In files
-            FileListBox.Items.Add(file)
+            If Directory.Exists(file) Then
+                Dim wavFiles = Directory.GetFiles(file, "*.wav", SearchOption.AllDirectories)
+                For Each wavFile In wavFiles
+                    FileListBox.Items.Add(wavFile)
+                Next
+            Else
+                FileListBox.Items.Add(file)
+            End If
         Next
         UpdateTranscriptionButtonState()
     End Sub
